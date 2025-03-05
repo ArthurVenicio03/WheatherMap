@@ -1,10 +1,7 @@
-Aqui está o arquivo **README.md** completo e organizado para o seu projeto **WeatherMap**:
-
----
 
 # WeatherMap
 
-O **WeatherMap** é um aplicativo simples e intuitivo que exibe a previsão do tempo atual, incluindo temperatura, condições climáticas e umidade. Ele utiliza a API do OpenWeatherMap para fornecer dados meteorológicos precisos e atualizados em tempo real.
+O **WeatherMap** é um aplicativo Android simples e intuitivo que exibe a previsão do tempo atual, incluindo temperatura, condições climáticas e umidade. Desenvolvido com **Kotlin**, **Jetpack Compose** e integração com a API do OpenWeatherMap, ele oferece uma experiência moderna e responsiva para os usuários.
 
 ---
 
@@ -14,6 +11,7 @@ O **WeatherMap** é um aplicativo simples e intuitivo que exibe a previsão do t
 - **Condições Climáticas**: Mostra as condições climáticas atuais (ex: céu limpo, nublado, chuva).
 - **Umidade**: Exibe a porcentagem de umidade do ar.
 - **Integração com API**: Utiliza a API do OpenWeatherMap para obter dados meteorológicos precisos e confiáveis.
+- **Interface Moderna**: Desenvolvido com Jetpack Compose para uma UI fluída e responsiva.
 
 ---
 
@@ -25,8 +23,11 @@ Antes de começar, você precisará de:
    - Obtenha uma chave de API gratuita no site do [OpenWeatherMap](https://openweathermap.org/api).
    - A chave será necessária para fazer requisições à API.
 
-2. **Node.js e npm**:
-   - Certifique-se de ter o Node.js e o npm instalados em sua máquina. Você pode baixá-los em [nodejs.org](https://nodejs.org/).
+2. **Android Studio**:
+   - Certifique-se de ter o Android Studio instalado. Você pode baixá-lo em [developer.android.com](https://developer.android.com/studio).
+
+3. **Dispositivo ou Emulador Android**:
+   - Um dispositivo físico ou um emulador configurado para testar o aplicativo.
 
 ---
 
@@ -40,33 +41,29 @@ Siga os passos abaixo para configurar e executar o projeto localmente:
    cd WeatherMap
    ```
 
-2. **Instale as dependências**:
-   ```bash
-   npm install
-   ```
+2. **Abra o projeto no Android Studio**:
+   - Inicie o Android Studio e selecione "Open an Existing Project".
+   - Navegue até a pasta do projeto e clique em "OK".
 
 3. **Configure a chave da API**:
-   - Crie um arquivo `.env` na raiz do projeto.
-   - Adicione sua chave de API do OpenWeatherMap no arquivo `.env`:
-     ```env
-     REACT_APP_OPENWEATHERMAP_API_KEY=sua_chave_aqui
+   - No arquivo `local.properties`, adicione sua chave de API do OpenWeatherMap:
+     ```properties
+     OPENWEATHERMAP_API_KEY=sua_chave_aqui
      ```
 
-4. **Inicie o aplicativo**:
-   ```bash
-   npm start
-   ```
-   - O aplicativo estará disponível em `http://localhost:3000`.
+4. **Execute o aplicativo**:
+   - Conecte um dispositivo Android ou inicie um emulador.
+   - Clique em "Run" (ícone de play) no Android Studio para compilar e executar o aplicativo.
 
 ---
 
 ## Como Usar
 
 1. **Acesse o aplicativo**:
-   - Abra o navegador e vá para `http://localhost:3000`.
+   - Abra o WeatherMap no seu dispositivo ou emulador.
 
 2. **Insira a localização**:
-   - Digite o nome da cidade no campo de busca e pressione "Enter".
+   - Digite o nome da cidade no campo de busca e pressione "Enter" ou o ícone de busca.
 
 3. **Veja a previsão do tempo**:
    - O aplicativo exibirá a temperatura, condições climáticas e umidade da localização inserida.
@@ -79,27 +76,34 @@ O projeto está organizado da seguinte forma:
 
 ```
 WeatherMap/
-├── public/                  # Arquivos estáticos (HTML, imagens, etc.)
-├── src/
-│   ├── components/          # Componentes React reutilizáveis
-│   ├── services/            # Serviços de integração com a API
-│   ├── App.js               # Componente principal do aplicativo
-│   ├── index.js             # Ponto de entrada do aplicativo
-│   └── styles/              # Estilos CSS ou módulos de estilo
-├── .env                     # Arquivo de configuração de variáveis de ambiente
-├── .gitignore               # Arquivo para ignorar arquivos no Git
-├── package.json             # Dependências e scripts do projeto
-└── README.md                # Documentação do projeto
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/example/weathermap/  # Código-fonte em Kotlin
+│   │   │   │   ├── ui/                      # Componentes da UI com Jetpack Compose
+│   │   │   │   ├── viewmodel/               # ViewModels para gerenciar dados
+│   │   │   │   ├── repository/             # Repositório para interação com a API
+│   │   │   │   ├── model/                   # Modelos de dados
+│   │   │   │   └── utils/                  # Utilitários e extensões
+│   │   │   ├── res/                         # Recursos do aplicativo (imagens, strings, etc.)
+│   │   │   └── AndroidManifest.xml          # Configurações do aplicativo
+│   │   └── test/                            # Testes unitários
+├── build.gradle                             # Configurações de build do módulo app
+├── local.properties                         # Arquivo para variáveis locais (API Key)
+├── .gitignore                               # Arquivo para ignorar arquivos no Git
+└── README.md                                # Documentação do projeto
 ```
 
 ---
 
 ## Tecnologias Utilizadas
 
-- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
-- **Axios**: Cliente HTTP para fazer requisições à API.
-- **OpenWeatherMap API**: API de previsão do tempo.
-- **CSS**: Estilização do aplicativo.
+- **Kotlin**: Linguagem de programação moderna para desenvolvimento Android.
+- **Jetpack Compose**: Framework declarativo para construção de interfaces de usuário.
+- **Retrofit**: Cliente HTTP para integração com a API do OpenWeatherMap.
+- **ViewModel**: Para gerenciar dados relacionados à UI de forma eficiente.
+- **LiveData/State**: Para observação de dados e atualização da UI.
+- **Material Design 3**: Design system moderno para interfaces Android.
 
 ---
 
@@ -132,6 +136,4 @@ Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em c
 
 **WeatherMap** - Mantenha-se informado sobre o clima de forma simples e rápida! 🌦️
 
---- 
-
-Esse arquivo README está bem detalhado e organizado, pronto para ser usado no seu repositório! Se precisar de mais ajustes, é só avisar. 😊
+---
