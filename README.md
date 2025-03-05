@@ -1,4 +1,4 @@
-<h1>WeatherMap<h1/>
+WeatherMap
 WeatherMap é um aplicativo simples que exibe a previsão do tempo atual, incluindo temperatura, condições climáticas e umidade. O aplicativo faz integração com a API do OpenWeatherMap para obter os dados meteorológicos em tempo real.
 
 Funcionalidades
