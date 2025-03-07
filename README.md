@@ -1,7 +1,7 @@
 
 # WeatherMap
 
-O **WeatherMap** é um aplicativo Android simples e intuitivo que exibe a previsão do tempo atual, incluindo temperatura, condições climáticas e umidade. Desenvolvido com **Kotlin**, **Jetpack Compose** e integração com a API do OpenWeatherMap, ele oferece uma experiência moderna e responsiva para os usuários.
+O **WeatherMap** é um aplicativo EM PRODUÇÃO Android simples e intuitivo que exibe a previsão do tempo atual, incluindo temperatura, condições climáticas e umidade. Desenvolvido com **Kotlin**, **Jetpack Compose** e integração com a API do OpenWeatherMap, ele oferece uma experiência moderna e responsiva para os usuários.
 
 ---
 
